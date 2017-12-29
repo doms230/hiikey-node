@@ -29,10 +29,10 @@ var user = require('./routes/user');
 
 var app = express();
 var api = new ParseServer({
-  databaseURI: 'mongodb://heroku_8j0dv6g4:euvg2oa85b1e3tbq7d0g59qfcb@ds163796.mlab.com:63796/heroku_8j0dv6g4',
-  appId: 'O9M9IE9aXxHHaKmA21FpQ1SR26EdP2rf4obYxzBF',
-  masterKey: 'lykNp62jc700RfU3EOr0WRe8ZCZJ4kiD4ZI4FRaZ', // Keep this key secret!
-  fileKey: '20137ff7-4160-41ee-bc18-1c2bf416e433',
+  databaseURI: [database URI],
+  appId: [APP ID],
+  masterKey: [Master key], // Keep this key secret!
+  fileKey: [File Key],
   serverURL: 'https://hiikey.herokuapp.com/parse',
   liveQuery: {
     classNames: ['Chat', 'PublicPost']
@@ -66,16 +66,15 @@ var api = new ParseServer({
       // Your domain from mailgun.com
       domain: 'reset.hiikey.com',
       // Your API key from mailgun.com
-      apiKey: 'key-931116e92b651622b653efef865d7a66'
+      apiKey: [API Key]
     }
   }
 });
 
-
 var dashboard = new ParseDashboard({
   "apps": [{
     "serverURL": 'https://hiikey.herokuapp.com/parse', // Not localhost
-    "appId": 'O9M9IE9aXxHHaKmA21FpQ1SR26EdP2rf4obYxzBF',
+    "appId": [APP id],
     "masterKey": 'lykNp62jc700RfU3EOr0WRe8ZCZJ4kiD4ZI4FRaZ',
     "appName": "Hiikey",
     "production": true,
